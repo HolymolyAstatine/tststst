@@ -1,15 +1,12 @@
-import express from "express";
-import { Pool } from "pg";
+import express, { Request, Response } from 'express';
 
 const app = express();
-const port = 3001;
+const port:number = 3001;
 
-app.get('/',(req,res) => {
-    res.send('hi 게이')
-    console.log('짱호')
-})
+app.get('/', (req: Request, res: Response) => {
+  res.send('Hello, TypeScript with Express!');
+});
 
-app.listen(port,() => {
-    console.log('짱쉬운 수학')
-    console.log(`서버 오픈 포트:${port}`)
-})
+app.listen(port, () => {
+  console.log(`Server is running at http://localhost:${port}`);
+});
